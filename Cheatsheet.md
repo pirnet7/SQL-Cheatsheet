@@ -37,7 +37,7 @@
 
 ## Read
 
-### <kbd>SELECT</kbd>
+## <kbd>SELECT</kbd>
 
 #### Get everything from table Car:
 
@@ -55,6 +55,20 @@ SELECT FirstName, LastName FROM Car
 
 ```
 SELECT FirstName as 'Name' FROM Car
+```
+
+## <kbd>ORDER BY</kbd>
+
+#### Order table Owner by Birthyear
+
+```
+SELECT * FROM Owner ORDER BY Birthyear;
+```
+
+#### Order table Owner by Birthyear descending
+
+```
+SELECT * FROM Owner ORDER BY Birthyear DESC;
 ```
 
 ## Update
