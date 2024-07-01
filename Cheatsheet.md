@@ -33,4 +33,32 @@
 </td></tr> 
 </table>
 
+## Create
+
+## Read
+
+### <kbd>SELECT</kbd>
+
+#### Get everything from table Car:
+
+```
+SELECT * FROM Car
+```
+
+#### Get Firstname and Lastname from table owner:
+
+```
+SELECT FirstName, LastName FROM Car
+```
+
+#### Get Firstname as "Name" from table owner:
+
+```
+SELECT FirstName as 'Name' FROM Car
+```
+
+## Update
+
+## Delete
+
 > **© 2024 Pirnet7.**
