@@ -327,4 +327,28 @@ ALTER TABLE car DROP Color;
 
 ## 🪢 Joins
 
+## <kbd>INNER Join</kbd>
+
+#### Combine Car and Owner tables matching on OwnerID:
+
+```
+SELECT Car.*, Owner.FirstName, Owner.LastName FROM Car INNER JOIN Owner ON Car.OwnerID = Owner.OwnerID;
+```
+
+## <kbd>LEFT Join</kbd>
+
+#### Retrieve all Cars and their Owners (if they have one):
+
+```
+SELECT Car.*, Owner.FirstName, Owner.LastName FROM Car LEFT JOIN Owner ON Car.OwnerID = Owner.OwnerID;
+```
+
+## <kbd>RIGHT Join</kbd>
+
+#### Retrieve all Owners and their Cars (if they own any):
+
+```
+SELECT Owner.*, Car.Brand, Car.ConstructionYear FROM Owner RIGHT JOIN Car ON Owner.OwnerID = Car.OwnerID;
+```
+
 > **© 2024 Pirnet7.**
