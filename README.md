@@ -123,6 +123,104 @@ SELECT FirstName, LastName FROM Car
 SELECT FirstName as 'Name' FROM Car
 ```
 
+## <kbd>WHERE</kbd>
+
+#### Get everything from Car with ID=2:
+
+```
+SELECT * FROM Car WHERE CarID='2'
+```
+
+###
+
+## <kbd>LIKE</kbd>
+
+#### Get every FirstName which contains the letter m/M:
+
+```
+SELECT * FROM Owner WHERE FirstName LIKE '%m%'
+```
+
+#### Get every FirstName which it's second letter is i:
+
+```
+SELECT * FROM Owner WHERE FirstName LIKE '_i%';'
+```
+
+#### Get every FirstName which starts with the letter V and ends with the letter a:
+
+```
+SELECT * FROM Owner WHERE FirstName LIKE 'v%n';'
+```
+
+## <kbd>AND</kbd>
+
+#### Get all Cars with ConstructionYear=2001 OR ConstructionYear=2023:
+
+```
+SELECT * FROM Cars WHERE ConstructionYear='2001' OR ConstructionYear='2023';
+```
+
+#### Get the Car with Brand='Ferrari' and ConstructionYear=2001
+
+```
+SELECT * FROM Car WHERE Brand='Ferrari' AND ConstructionYear='2001';
+```
+
+## <kbd>NOT</kbd>
+
+#### Get all Owners except Veronica:
+
+```
+SELECT * FROM Owner WHERE NOT FirstName = 'Veronica';
+```
+
+## <kbd>MIN/MAX</kbd>
+
+#### Get oldest Owner:
+
+```
+SELECT MIN(Birthyear) FROM Owner;
+```
+
+#### Get youngest Owner:
+
+```
+SELECT MAX(Birthyear) FROM Owner;
+```
+
+## <kbd>COUNT</kbd>
+
+#### Count all Cars together:
+
+```
+SELECT COUNT(*) FROM Car;
+```
+
+## <kbd>SUM</kbd>
+
+#### Count all ConstructionYears together:
+
+```
+SELECT SUM(ConstructionYear) FROM Car;
+```
+
+## <kbd>AVG</kbd>
+
+#### Get Average of all Birthyear together:
+
+```
+SELECT AVG(Birthyear) FROM Owner;
+```
+
+## <kbd>BETWEEN</kbd>
+
+#### Get Birthyears BETWEEN 2002 AND 2005:
+
+```
+SELECT * FROM Products WHERE Birthyear BETWEEN 2002 AND 2005;
+```
+
 ## <kbd>ORDER BY</kbd>
 
 #### Order table Owner by Birthyear
