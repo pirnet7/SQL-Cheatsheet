@@ -253,7 +253,7 @@ ALTER TABLE car ADD Color VARCHAR(40);
 
 ## <kbd>DELETE</kbd>
 
-#### Remove row where Brand='Jeep' Brand 'Audi' to 'Jeep':
+#### Remove row where Brand='Jeep':
 
 ```
 DELETE FROM Car WHERE Brand='Jeep';
@@ -324,5 +324,7 @@ ALTER TABLE car DROP Color;
 
 </td></tr> 
 </table>
+
+## 🪢 Joins
 
 > **© 2024 Pirnet7.**
