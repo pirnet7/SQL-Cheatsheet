@@ -30,7 +30,7 @@ DESC Car;
 | CarID | Brand       | ConstructionYear |
 | ----- | ----------- | ---------------- |
 | 1     | Ferrari     | 2001             |
-| 2     | Alfa Roemeo | 2023             |
+| 2     | Alfa Romeo | 2023             |
 | 3     | Mercedes    | 2015             |
 | 4     | BMW         | 2023             |
 | 5     | Audi        | 2020             |
@@ -79,7 +79,7 @@ INSERT INTO Owner(id, firstName, lastName, birthyear) VALUES
 | CarID | Brand       | ConstructionYear |
 | ----- | ----------- | ---------------- |
 | 1     | Ferrari     | 2001             |
-| 2     | Alfa Roemeo | 2023             |
+| 2     | Alfa Romeo | 2023             |
 | 3     | Mercedes    | 2015             |
 | 4     | BMW         | 2023             |
 | 5     | Audi        | 2020             |
@@ -270,7 +270,7 @@ DELETE FROM Car WHERE Brand='Jeep';
 | CarID | Brand       | ConstructionYear |
 | ----- | ----------- | ---------------- |
 | 1     | Ferrari     | 2001             |
-| 2     | Alfa Roemeo | 2023             |
+| 2     | Alfa Romeo | 2023             |
 | 3     | Mercedes    | 2015             |
 | 4     | BMW         | 2023             |
 | 5     | Jeep        | 2020             |
@@ -280,7 +280,7 @@ DELETE FROM Car WHERE Brand='Jeep';
 | CarID | Brand       | ConstructionYear |
 | ----- | ----------- | ---------------- |
 | 1     | Ferrari     | 2001             |
-| 2     | Alfa Roemeo | 2023             |
+| 2     | Alfa Romeo | 2023             |
 | 3     | Mercedes    | 2015             |
 | 4     | BMW         | 2023             |
 | -     | -           | -                |
