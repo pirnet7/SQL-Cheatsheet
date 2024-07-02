@@ -103,7 +103,7 @@ CREATE TABLE OwnershipHistory (
 
 ## Read
 
-## <kbd>SELECT</kbd>
+<kbd>SELECT</kbd>
 
 #### Get everything from table Car:
 
