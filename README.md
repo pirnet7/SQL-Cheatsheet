@@ -14,10 +14,15 @@ USE Vehicle;
 SHOW TABLES;
 ```
 
+### Show specific table:
+
+```
+DESC Car;
+```
+
 <table>
 <tr>
 <th>Car</th>
-<th>Owner</th>
 </tr>
 <tr>
 <td>
@@ -30,20 +35,10 @@ SHOW TABLES;
 | 4     | BMW         | 2023             |
 | 5     | Audi        | 2020             |
 
-</td><td>
-
-| OwnerID | FirstName | LastName | Birthyear |
-| ------- | --------- | -------- | --------- |
-| 1       | Max       | Meier    | 2002      |
-| 2       | Tim       | Weber    | 1998      |
-| 3       | Veronica  | Shabid   | 2005      |
-| 4       | Alicia    | Davidson | 2002      |
-| 5       | Simon     | Schmidt  | 2003      |
-
 </td></tr> 
 </table>
 
-## Create
+## 📝 Create
 
 #### Create Database with name Vehicle
 
@@ -51,21 +46,32 @@ SHOW TABLES;
 CREATE DATABASE Vehicle;
 ```
 
-#### Create Table
+#### Create table
 
 ```
-CREATE TABLE OwnershipHistory (
-    OwnershipHistoryID int,
-    CarID varchar(255),
-    OwnerID varchar(255)
+CREATE TABLE Owner (
+    OwnerID INT PRIMARY KEY,
+    FirstName VARCHAR(255),
+    LastName VARCHAR(255),
+    Birthyear INT
 );
+```
+
+#### Insert values to table
+
+```
+INSERT INTO Owner(id, firstName, lastName, birthyear) VALUES
+(1, 'Max', 'Meier', 2002),
+(2, 'Tim', 'Weber', 2002),
+(3, 'Veronica', 'Shabid', 2002),
+(4, 'Alicia', 'Davidson', 2002),
+(5, 'Simon', 'Schmidt', 1995);
 ```
 
 <table>
 <tr>
 <th>Car</th>
 <th>Owner</th>
-<th>OwnershipHistory</th>
 </tr>
 <tr>
 <td>
@@ -88,22 +94,12 @@ CREATE TABLE OwnershipHistory (
 | 4       | Alicia    | Davidson | 2002      |
 | 5       | Simon     | Schmidt  | 2003      |
 
-</td><td>
-
-| OwnershipHistoryID | CarID | OwnerID |
-| ------------------ | ----- | ------- |
-| 1                  | 1     | 3       |
-| 2                  | 4     | 3       |
-| 3                  | 3     | 1       |
-| 4                  | 2     | 4       |
-| 5                  | 1     | 4       |
-
 </td></tr> 
 </table>
 
-## Read
+## 📄 Read
 
-<kbd>SELECT</kbd>
+### <kbd>SELECT</kbd>
 
 #### Get everything from table Car:
 
@@ -235,8 +231,98 @@ SELECT * FROM Owner ORDER BY Birthyear;
 SELECT * FROM Owner ORDER BY Birthyear DESC;
 ```
 
-## Update
+## 📑 Update
 
-## Delete
+## <kbd>UPDATE</kbd>
+
+#### Rename Brand 'Audi' to 'Jeep':
+
+```
+UPDATE Car SET Brand='Jeep' WHERE Brand='Audi';
+```
+
+## <kbd>ALTER</kbd>
+
+#### Add column 'Color' to table Car:
+
+```
+ALTER TABLE car ADD Color VARCHAR(40);
+```
+
+## 🗑️ Delete
+
+## <kbd>DELETE</kbd>
+
+#### Remove row where Brand='Jeep' Brand 'Audi' to 'Jeep':
+
+```
+DELETE FROM Car WHERE Brand='Jeep';
+```
+
+<table>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+<tr>
+<td>
+
+| CarID | Brand       | ConstructionYear |
+| ----- | ----------- | ---------------- |
+| 1     | Ferrari     | 2001             |
+| 2     | Alfa Roemeo | 2023             |
+| 3     | Mercedes    | 2015             |
+| 4     | BMW         | 2023             |
+| 5     | Jeep        | 2020             |
+
+</td><td>
+
+| CarID | Brand       | ConstructionYear |
+| ----- | ----------- | ---------------- |
+| 1     | Ferrari     | 2001             |
+| 2     | Alfa Roemeo | 2023             |
+| 3     | Mercedes    | 2015             |
+| 4     | BMW         | 2023             |
+| -     | -           | -                |
+
+</td></tr> 
+</table>
+
+## <kbd>ALTER</kbd>
+
+#### Remove column 'Color' from table Car:
+
+```
+ALTER TABLE car DROP Color;
+```
+
+<table>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+<tr>
+<td>
+
+| CarID | Brand      | ConstructionYear | Color |
+| ----- | ---------- | ---------------- | ----- |
+| 1     | Ferrari    | 2001             | Green |
+| 2     | Alfa Romeo | 2023             | White |
+| 3     | Mercedes   | 2015             | Red   |
+| 4     | BMW        | 2023             | White |
+| 5     | Jeep       | 2020             | Black |
+
+</td><td>
+
+| CarID | Brand      | ConstructionYear | -   |
+| ----- | ---------- | ---------------- | --- |
+| 1     | Ferrari    | 2001             | -   |
+| 2     | Alfa Romeo | 2023             | -   |
+| 3     | Mercedes   | 2015             | -   |
+| 4     | BMW        | 2023             | -   |
+| 5     | Jeep       | 2020             | -   |
+
+</td></tr> 
+</table>
 
 > **© 2024 Pirnet7.**
