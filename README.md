@@ -351,4 +351,8 @@ SELECT Car.*, Owner.FirstName, Owner.LastName FROM Car LEFT JOIN Owner ON Car.Ow
 SELECT Owner.*, Car.Brand, Car.ConstructionYear FROM Owner RIGHT JOIN Car ON Owner.OwnerID = Car.OwnerID;
 ```
 
+## 🎢 Overview of SQL
+
+![Overview of sql](sql-overview.png)
+
 > **© 2024 Pirnet7.**
