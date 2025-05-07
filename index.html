@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PIRNET7 | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-image: url('https://capsule-render.vercel.app/api?type=waving&height=300&color=282a35&text=PIRNET7&section=header&fontColor=7ed2f0&textBg=false');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #7ed2f0;
+    }
+
+    section {
+      margin-top: 2.5rem;
+    }
+
+    .icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .icons img {
+      height: 40px;
+      transition: transform 0.2s;
+    }
+
+    .icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .views {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .icons {
+        justify-content: flex-start;
+      }
+
+      .stats img, .views img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main>
+    <h1>👋 Welcome To My Landing Page</h1>
+    <p>Hi, I'm <strong>pirnet7</strong> from Switzerland. I'm a software developer passionate about learning and building cool things.</p>
+
+    <section>
+      <h2>👨‍💻 About Me</h2>
+      <p>🔭 Working as a software developer</p>
+      <p>📚 Currently learning TypeScript</p>
+      <p>⚡ In my free time, I create websites</p>
+    </section>
+
+    <section>
+      <h2>✏️ I Code With</h2>
+      <div class="icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+      </div>
+    </section>
+
+    <section>
+      <h2>🛠 With The Tools</h2>
+      <div class="icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="Ansible" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+      </div>
+    </section>
+
+    <section>
+      <h2>🔥 My Stats</h2>
+      <div class="stats">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs?username=pirnet7&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" alt="GitHub stats"/>
+      </div>
+    </section>
+
+    <section>
+      <h2>👀 My Views</h2>
+      <div class="views">
+        <img src="https://profile-counter.glitch.me/pirnet7/count.svg?" alt="Profile views"/>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
